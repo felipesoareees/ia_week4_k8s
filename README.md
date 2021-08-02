@@ -150,8 +150,20 @@ A Secret is an object that contains a small amount of sensitive data such as a p
 ![image](https://user-images.githubusercontent.com/83301821/127897578-0d363abd-766a-4a82-b19d-2de0bd7c00fb.png)
 
 - Volume
+
+As we've already mentioned, pod's are ephemeral. That is, if we try to store persistent data only with the pod's we will end up losing our data. It is in this sense that the use of volumes arises.
+Differently from what we saw in docker, there are several types of volume of kubernetes in which each type is used for its due situation and for each pod we can define the desired amount as needed.
+
+Bellow, the example:
+
+![image](https://user-images.githubusercontent.com/83301821/127909751-f162dca0-df57-4a17-8f3e-7f3d2f6be1da.png)
+
 - PV
+
+A PersistentVolume (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes. It is a resource in the cluster just like a node is a cluster resource. PVs are volume plugins like Volumes, but have a lifecycle independent of any individual Pod that uses the PV. This API object captures the details of the implementation of the storage, be that NFS, iSCSI, or a cloud-provider-specific storage system.
+
 - PVC
+A PersistentVolumeClaim (PVC) is a request for storage by a user. It is similar to a Pod. Pods consume node resources and PVCs consume PV resources. Pods can request specific levels of resources (CPU and Memory). Claims can request specific size and access modes
 
 # What are Custom Resource Definitions
 
