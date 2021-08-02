@@ -144,6 +144,11 @@ Example:
 ![image](https://user-images.githubusercontent.com/83301821/127893251-d8694088-7a42-4bfe-89ba-55ded2302641.png)
 
 - Secret
+
+A Secret is an object that contains a small amount of sensitive data such as a password, a token, or a key. Such information might otherwise be put in a Pod specification or in a container image. Using a Secret means that you don't need to include confidential data in your application code.
+
+![image](https://user-images.githubusercontent.com/83301821/127897578-0d363abd-766a-4a82-b19d-2de0bd7c00fb.png)
+
 - Volume
 - PV
 - PVC
