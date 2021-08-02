@@ -98,6 +98,12 @@ It is an object used to perform deployment in statefull type applications. In th
 Above, a example of stateFullSet operation with use of PVC(we will explain in the next topics). In this case, a example of scale down and after scale up.
 
 - Job
+
+A Job creates one or more Pods and will continue to retry execution of the Pods until a specified number of them successfully terminate.
+
+![image](https://user-images.githubusercontent.com/83301821/127882769-57a5eb9c-3078-4c79-9e8b-88930311f9e6.png)
+
+
 - Cronjob
 - Service
 An abstract way to expose an application running on a set of Pods as a network service.
