@@ -103,8 +103,19 @@ A Job creates one or more Pods and will continue to retry execution of the Pods 
 
 ![image](https://user-images.githubusercontent.com/83301821/127882769-57a5eb9c-3078-4c79-9e8b-88930311f9e6.png)
 
-
 - Cronjob
+
+It also implements a job, but a schedule is done through a scheduler option (the syntax is the same as crontab)
+
+Example:
+
+![image](https://user-images.githubusercontent.com/83301821/127888364-2e33a406-8277-43b0-a547-ae4b9f30a651.png)
+
+Note:
+
+![image](https://user-images.githubusercontent.com/83301821/127888412-989c0b30-ab29-4963-b094-8963bd73b3ca.png)
+
+
 - Service
 An abstract way to expose an application running on a set of Pods as a network service.
 With Kubernetes you don't need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives Pods their own IP addresses and a single DNS name for a set of Pods, and can load-balance across them.
@@ -114,6 +125,11 @@ With Kubernetes you don't need to modify your application to use an unfamiliar s
 In the above example, we expose a http nginx application in port 30001.
 
 - Ingress
+
+ Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+ 
+![image](https://user-images.githubusercontent.com/83301821/127892507-edfa6cff-f8f5-4a44-bd9c-54caeae710b0.png)
+
 - ConfigMap
 - Secret
 - Volume
