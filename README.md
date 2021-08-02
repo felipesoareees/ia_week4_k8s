@@ -86,6 +86,17 @@ And we can list the deployment above:
 ![image](https://user-images.githubusercontent.com/83301821/127694299-0d05cc51-26cb-43f4-ae7b-1e5193d668a5.png)
 
 - StatefulSet
+
+It is an object used to perform deployment in statefull type applications. In this object, each pod is uniquely mapped. Because here the order of each one of them matters in the application. Thus, this solution is used with PV (persistent volume) to ensure data consistency. One of the features of statefullSet:
+ (a) Stable, unique network identifiers.
+ (b) Stable, persistent storage.
+ (c) Ordered, graceful deployment and scaling.
+ (d) Ordered, automated rolling updates.
+
+![image](https://user-images.githubusercontent.com/83301821/127878643-41858294-1680-4eae-8483-903d382bfe7c.png)
+
+Above, a example of stateFullSet operation with use of PVC(we will explain in the next topics). In this case, a example of scale down and after scale up.
+
 - Job
 - Cronjob
 - Service
