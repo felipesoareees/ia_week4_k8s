@@ -131,6 +131,18 @@ In the above example, we expose a http nginx application in port 30001.
 ![image](https://user-images.githubusercontent.com/83301821/127892507-edfa6cff-f8f5-4a44-bd9c-54caeae710b0.png)
 
 - ConfigMap
+
+A ConfigMap is an API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
+
+Example:
+(i) Creating a confimap type object:
+
+![image](https://user-images.githubusercontent.com/83301821/127893122-0232071d-45c6-4166-81b5-c71b356cb034.png)
+
+(ii) Associating a configmap value to pod :
+
+![image](https://user-images.githubusercontent.com/83301821/127893251-d8694088-7a42-4bfe-89ba-55ded2302641.png)
+
 - Secret
 - Volume
 - PV
