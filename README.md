@@ -50,6 +50,9 @@ On worker nodes, we have the following modules running:
 - Container-runtime: It is the software that will be responsible for running the containers (in our case the docker).
 
 # What is a Kubeconfig and how to use it [PRACTICE]
+Use kubeconfig files to organize information about clusters, users, namespaces, and authentication mechanisms. The ```kubectl``` command-line tool uses kubeconfig files to find the information it needs to choose a cluster and communicate with the API server of a cluster.
+
+![image](https://user-images.githubusercontent.com/83301821/128562451-50dd7b15-a14d-49a2-b6e6-fac3daee53b4.png)
 
 # Working with Kubernetes Objects [PRATICE]:
 
