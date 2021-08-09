@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+  labels:
+    app: test-app
+    type: test
+spec:
+  template:
+     metadata:
+       name: test-pod
+       labels:
+         app: test-app
+         type: test
+     spec:
+       containers:
+         - name: frontend-container
+           image: nginx
+           volumeMounts:
+           - name: nfs-pv
+             mountPath: /usr/share/nginx/html
+           ports:
+           - containerPort: 80
+             protocol: TCP
+           resources:
+             limits:
+               memory: 300Mi
+               cpu: "200m"
+             requests:
+               memory: 256Mi
+               cpu: "150m"
+       volumes:
+       - name: nfs-pv
+         persistentVolumeClaim:
+           claimName: first-pvc
+  selector:
+     matchLabels:
+       type: test
+  replicas: 3
