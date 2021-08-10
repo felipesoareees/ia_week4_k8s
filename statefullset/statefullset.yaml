@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  labels:
+    app: psql-service
+spec:
+  ports:
+  - port: 5432
+    name: postgres
+  clusterIP: None
+  selector:
+    app: postgres
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres-statefull
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  serviceName: postgres-service
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: postgres
+        image: postgres
+        volumeMounts:
+          - name: db-pv
+            mountPath: /var/lib/postgresl/data
+        env:
+          - name: POSTGRES_DATABASE
+            value: kubernetes
+          - name: POSTGRES_PASSWORD  
+            value: kubernetes
+          - name: POSTGRES_USER
+            value: kubernetes
+      volumes:
+      - name: db-pv
+        persistentVolumeClaim:
+           claimName: pvc-db

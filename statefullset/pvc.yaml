@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-db
+spec:
+  storageClassName: storage-rampup
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 800Mi
