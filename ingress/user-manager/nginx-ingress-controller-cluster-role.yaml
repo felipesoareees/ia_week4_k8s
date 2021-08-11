@@ -6,8 +6,9 @@ rules:
   - apiGroups:
       - ""
       - "extensions"
+      - "networking.k8s.io"
     resources:
-      - confimaps
+      - configmaps
       - secrets
       - endpoints
       - ingresses
@@ -16,6 +17,8 @@ rules:
     verbs:
       - list
       - watch
+      - get
+      - update
   - apiGroups:
       - ""
     resources:
@@ -27,6 +30,7 @@ rules:
       - update
   - apiGroups:
       - "extensions"
+      - "networking.k8s.io"
     resources:
       - ingresses
     verbs:
@@ -39,6 +43,7 @@ rules:
       - create
   - apiGroups:
       - "extensions"
+      - "networking.k8s.io"
     resources:
       - ingresses/status
     verbs:
@@ -48,4 +53,7 @@ rules:
     resources:
       - configmaps
     verbs:
+      - list
+      - watch
       - get
+      - update
