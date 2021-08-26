@@ -10,5 +10,5 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     path: /opt/database
-    server: 172.31.18.110
+    server: 192.168.18.91
     readOnly: false

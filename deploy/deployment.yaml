@@ -36,4 +36,4 @@ spec:
   selector:
      matchLabels:
        type: test
-  replicas: 3
+  replicas: 2
